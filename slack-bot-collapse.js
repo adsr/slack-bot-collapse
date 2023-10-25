@@ -92,7 +92,7 @@
         // Build summary of textContent for the summary element
         const summaryText = [];
         for (const chatContent of details.children) {
-            if (!chatContent.tagName === 'SUMMARY') continue;
+            if (chatContent.tagName === 'SUMMARY') continue;
             summaryText.push(chatContent.textContent);
         }
         summary.innerHTML = summaryText.join(' ');
